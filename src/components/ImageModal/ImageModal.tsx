@@ -1,7 +1,14 @@
 import Modal from "react-modal";
+import { Image } from "../../types";
+import { FC } from "react";
 import s from "./ImageModal.module.css";
 
-const ImageModal = ({ image, onClose }) => {
+interface ImageModalProps {
+  image: Image;
+  onClose: () => void;
+}
+
+const ImageModal: FC<ImageModalProps> = ({ image, onClose }) => {
   return (
     <Modal
       className={s.modal_content}
